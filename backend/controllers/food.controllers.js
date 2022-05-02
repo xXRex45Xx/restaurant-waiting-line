@@ -10,7 +10,7 @@ const AddFood = async (req, res) => {
     const {food} = req.body;
     const newFood = new FoodModel(food);
     await newFood.save();
-    req.status(200).json(newFood);
+    res.status(200).json({success: true, insertedId: newFood._id});
 }
 
 const GetSpecificFood = async (req, res) => {
