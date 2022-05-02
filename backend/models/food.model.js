@@ -3,14 +3,11 @@ import mongoose from "mongoose";
 const foodSchema = new mongoose.Schema({
     name: {
         type: String,
-        max: 255,
-        unique: true,
-        required: true
+        max: 255
     },
     ingredients:{
         type: String,
-        max: 1500,
-        required: true
+        max: 1500
     },
     price: {
         type: Number,

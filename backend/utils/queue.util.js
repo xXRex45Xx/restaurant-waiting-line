@@ -22,11 +22,12 @@ export default class Queue {
         }
 
         if (initialData && Array.isArray(initialData)) {
-
+            this.count = 0;
             initialData.sort((firstElement, secondElement) => firstElement.queueId - secondElement.queueId);
-            for (const queueData of initialData)
-                this.enQueue(queueData);
-            this.count = initialData.length;
+            for (const queueData of initialData){
+                console.log(queueData)
+                this.enQueue(queueData.data);
+            }
             return;
         }
 
@@ -35,7 +36,7 @@ export default class Queue {
         this.count = 1;
     }
 
-    isEmpty = () => count == 0;
+    isEmpty = () => this.count == 0;
 
     getCount = () => this.count;
 
@@ -45,15 +46,15 @@ export default class Queue {
 
     enQueue(data) {
         const newNode = new QueueNode(data);
-        
-        this.count++;
+
         if (this.isEmpty()) {
             this.head = this.tail = newNode;
+            this.count++;
             return;
         }
-
         this.tail.next = newNode;
         this.tail = newNode;
+        this.count++;
     }
 
     deQueue() {
@@ -70,9 +71,14 @@ export default class Queue {
         return data;
     }
 
+    empty()
+    {
+        while(!this.isEmpty())
+            this.deQueue()
+    }
+
     getAllAsArray() {
         const arr = new Array();
-
         let tempNode = this.head;
         let queueCount = 0;
         while (tempNode != null) {

@@ -1,6 +1,7 @@
 import FoodModel from "../models/food.model.js";
 
 const GetAllFoods = async (req, res) => {
+    console.log(global.queue.getAllAsArray());
     const { q } = req.query;
     const foods = await FoodModel.find(q ? { name: new RegExp(q) } : null);
     res.status(200).json(foods);

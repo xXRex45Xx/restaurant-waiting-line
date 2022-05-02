@@ -6,9 +6,9 @@ const queueRoute = express.Router();
 
 queueRoute.route("/")
     .get(queueControllers.GetAllQueue)
-    .post((req, res) => {})
-    .delete((req, res) => {});
+    .post(queueControllers.AddToQueue)
+    .delete(queueControllers.ClearQueue);
 
-queueRoute.delete((req, res) => {});
+queueRoute.delete("/dequeue",queueControllers.Dequeue);
 
 export default queueRoute;

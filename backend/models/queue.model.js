@@ -4,11 +4,10 @@ const queueSchema = new mongoose.Schema({
     queueId: {
         type: Number,
         min: 0,
-        unique: true,
         required: true
     },
     data: {
-        foodList: [{foodId: mongoose.Types.ObjectId}],
+        foodList: [mongoose.Types.ObjectId],
         totalPrice: Number
     }
 });
