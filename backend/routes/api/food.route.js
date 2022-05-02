@@ -5,11 +5,11 @@ const foodRoute = express.Router();
 
 foodRoute.route("/")
     .get(foodControllers.GetAllFoods)
-    .post((req, res) => {});
+    .post(foodControllers.AddFood);
 
 foodRoute.route("/:foodId")
-    .get((req, res) => {})
-    .patch((req, res) => {})
-    .delete((req, res) => {});
+    .get(foodControllers.GetSpecificFood)
+    .patch(foodControllers.UpdateFood)
+    .delete(foodControllers.DeleteFood);
 
 export default foodRoute;
