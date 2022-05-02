@@ -1,0 +1,27 @@
+food
+
+GET     /api/food?q=        Get All or Search food        
+POST    /api/food           Add New food
+GET     /api/food/:foodId   Get Specific Food
+PATCH   /api/food/:foodId   Update Food
+DELETE  /api/food/:foodId   Delete Food
+
+User
+
+GET     /api/user?q=        Get All or Search User
+POST    /api/user           Add New User
+GET     /api/user/:userId   Get Specific User
+PATCH   /api/user/:userId   Update User
+DELETE  /api/user/:userId   Delete user
+
+Queue
+
+GET     /api/queue          Get Queue
+DELETE  /api/queue          Clear Queue
+POST    /api/queue          Add Queue Node(EnQueue)
+GET     /api/queue          Get Specific Queue
+DELETE  /api/queue/:queueId Delete Queue
+PATCH   /api/queue/:queueId Update Queue
+POST    /api/queue/enqueue  EnQueue
+DELETE  /api/queue/dequeue  DeQueue
+
