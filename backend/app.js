@@ -6,23 +6,28 @@ import QueueModel from "./models/queue.model.js";
 import Food from "./models/food.model.js";
 import routes from "./routes/index.js";
 import AppError from "./utils/error/app-error.util.js"
+import path from "path"
+import { fileURLToPath } from "url";
 
 const app = express();
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 app.use(express.urlencoded({extended: true}));
+app.use(express.static(path.join(__dirname, "../frontend/public")));
+
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "../frontend/src"));
 
 app.get("/", (req, res, next) =>
 {
-    const mortodiella = new Food({
-        name: 'Mortodiella',
-        ingredients: 'a lotta things',
-        price: 499.99
-    });
-    mortodiella.save();
-    res.send("works");
+    res.render("user-pages/main.page.ejs");
 })
 
 app.use("/api", routes.apiRouter);
+
+app.get("/login", (req, res, next) => {
+    
+})
 
 app.all("*", async(req, res, next) => {
     next(new AppError("Not Found", 404));

@@ -20,6 +20,10 @@ const userSchema = new mongoose.Schema({
     password: {
         type: Buffer,
         required: true
+    },
+    isAdmin: {
+        type: Boolean,
+        required: true
     }
 })
 

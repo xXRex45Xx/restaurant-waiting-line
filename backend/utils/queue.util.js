@@ -24,7 +24,7 @@ export default class Queue {
         if (initialData && Array.isArray(initialData)) {
             this.count = 0;
             initialData.sort((firstElement, secondElement) => firstElement.queueId - secondElement.queueId);
-            for (const queueData of initialData){
+            for (const queueData of initialData) {
                 console.log(queueData)
                 this.enQueue(queueData.data);
             }
@@ -44,7 +44,7 @@ export default class Queue {
 
     peepFront = () => this.head.data;
 
-    enQueue(data) {
+    enQueue = data => {
         const newNode = new QueueNode(data);
 
         if (this.isEmpty()) {
@@ -57,7 +57,7 @@ export default class Queue {
         this.count++;
     }
 
-    deQueue() {
+    deQueue = () => {
         if (this.isEmpty())
             throw new EmptyQueueError();
 
@@ -71,13 +71,12 @@ export default class Queue {
         return data;
     }
 
-    empty()
-    {
-        while(!this.isEmpty())
+    empty = () => {
+        while (!this.isEmpty())
             this.deQueue()
     }
 
-    getAllAsArray() {
+    getAllAsArray = () => {
         const arr = new Array();
         let tempNode = this.head;
         let queueCount = 0;
@@ -88,7 +87,7 @@ export default class Queue {
             });
             tempNode = tempNode.next;
         }
-        
+
         return arr;
     }
 }
