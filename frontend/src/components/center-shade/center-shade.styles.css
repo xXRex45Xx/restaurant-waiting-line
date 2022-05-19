@@ -1,0 +1,29 @@
+.centerShade{
+    width: 30%;
+    height: calc(100% + 39%);
+    background-color: #c4c4c4;
+    opacity: 0.75;
+    transform: rotate(-20deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;  
+    overflow: hidden;
+}
+
+.children{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(20deg);
+}
+
+@media screen and (max-width:960px){
+    .centerShade{
+        width: 45%;
+    }
+}
+
+

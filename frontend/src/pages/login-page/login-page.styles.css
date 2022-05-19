@@ -1,0 +1,28 @@
+.loginPage{
+    width: 100%;
+    height: 100%;
+    background-image: url(../../Assets/Images/login-page-bg.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden;
+}
+
+h2{
+    align-self: flex-start;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 48px;
+    color: #181D2D;
+    margin-bottom: auto;
+}
+h3{
+    align-self: flex-start;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 194.62%;
+    margin: auto 10%; 
+}

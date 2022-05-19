@@ -1,0 +1,40 @@
+.loginForm {
+    padding: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+
+    align-items: center;
+}
+
+.loginForm_inputContainer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 29px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.loginForm_inputImg {
+    height: 16pt;
+}
+
+.loginForm_input {
+    text-decoration: none;
+    border: none;
+    border-left: 1px solid #324A59;
+    background: transparent;
+    outline: none;
+    font-size: 16pt;
+    padding: 5px;
+    color: #324A59;
+    margin-left: 5px;
+}
+
+.loginForm_submit {
+    background-color: transparent;
+    border: none;
+    align-self: flex-end;
+}
