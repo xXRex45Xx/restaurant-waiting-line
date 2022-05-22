@@ -1,0 +1,13 @@
+.containerShade{
+    background-color: #c4c4c4;
+    opacity: 0.75;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;  
+    overflow-y: auto;
+}
+
+.containerShade_children{
+    width: 100%;
+}

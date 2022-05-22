@@ -11,7 +11,7 @@
     overflow: hidden;
 }
 
-.children{
+.centerShade_children{
     width: 100%;
     display: flex;
     flex-flow: column nowrap;
