@@ -1,0 +1,53 @@
+.newUser{
+    margin: 20px auto;
+    width: 50rem;
+    max-width: 95%;
+    text-align: center;
+}
+
+.newUser button{
+    font: inherit;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border: none;
+    background-color: grey;
+    color: white;
+    border-radius: 10px;
+    margin-right: 1rem;
+}
+
+.newUser button:hover,
+.newUser button:active {
+    text-decoration: underline;
+}
+
+.newUser_inputs{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.newUser_inputContainer label{
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.newUser_inputContainer input{
+    font: inherit;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 20rem;
+    max-width: 100%;
+}
+
+.newUser_inputContainer input.empty{
+    border: 1px solid red;
+}
+
+.newUser_actions {
+    text-align: right;
+}

@@ -4,6 +4,7 @@ import encryptPassword from "../utils/pass-encryption.utils.js";
 
 const login = async (req, res) => {
     const { username, password } = req.body;
+    console.log(req.body)
     const user = await UserModel.find({ username });
     if (!user.length ||
         encryptPassword(password).toString('hex') !== user[0].password.toString('hex')
@@ -16,11 +17,14 @@ const login = async (req, res) => {
         console.dir(user[0]._id.toString())
         req.session.user = {
             id: user[0]._id.toString(),
-            isAdmin: user[0].isAdmin
+            isAdmin: user[0].isAdmin ? true : false
         }
         res.status(200).json({
             success: true,
-            isAdmin: user[0].isAdmin
+            user: {
+                id: user[0]._id.toString(),
+                isAdmin: user[0].isAdmin ? true : false
+            }
         })
     })
 }
@@ -46,10 +50,21 @@ const changePassword = async (req, res) => {
     req.session.destroy();
     res.status(200).json({ success: true });
 }
+
+const getLoggedInUser = async (req, res) => {
+    if (!req.session.user)
+        return res.status(401).json({ success: false });
+    res.status(200).json({
+        success: true,
+        user: req.session.user
+    });
+}
+
 const UserLogControllers = {
     login,
     logout,
-    changePassword
+    changePassword,
+    getLoggedInUser
 }
 
 export default UserLogControllers;

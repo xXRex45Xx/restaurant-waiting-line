@@ -1,12 +1,13 @@
 .adminPage{
+    padding: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../../Assets/Images/login-page-bg.png);
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-position:center;
+    overflow: auto;
+}
+
+.adminPage_main{
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow:hidden;
+    height: 100%;
 }

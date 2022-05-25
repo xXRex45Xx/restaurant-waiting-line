@@ -7,5 +7,6 @@ const userLogRoute = express.Router();
 userLogRoute.post("/login", wrapAsync(UserLogControllers.login));
 userLogRoute.get("/logout", wrapAsync(UserLogControllers.logout));
 userLogRoute.post("/changepass", wrapAsync(UserLogControllers.changePassword));
+userLogRoute.get("/currentuser", wrapAsync(UserLogControllers.getLoggedInUser));
 
 export default userLogRoute;

@@ -11,6 +11,6 @@ queueRoute.route("/")
     .post(wrapAsync(employeeAuthorization), wrapAsync(queueControllers.AddToQueue))
     .delete(wrapAsync(employeeAuthorization), wrapAsync(queueControllers.ClearQueue));
 
-queueRoute.delete("/dequeue",wrapAsync(queueControllers.Dequeue));
+queueRoute.delete("/dequeue", wrapAsync(employeeAuthorization), wrapAsync(queueControllers.Dequeue));
 
 export default queueRoute;

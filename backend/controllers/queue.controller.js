@@ -6,19 +6,22 @@ const GetAllQueue = async (req, res, next) => {
 }
 
 const AddToQueue = async (req, res, next) => {
-    const { foods } = req.body;
+    const { foods, name } = req.body;
     let totalPrice = 0;
     for (let food of foods) {
         totalPrice += (await FoodModel.findById(food).select({ price: 1, _id: 0 })).price
     }
-    global.queue.enQueue({ foodList: foods, totalPrice });
+    global.queue.enQueue({ name, foodList: foods, totalPrice });
     res.status(200).json({ success: true });
     await QueueModel.deleteMany({});
-    await new QueueModel(
-        {
-            queueId: global.queue.count - 1,
-            data: global.queue.peepBack()
-        }).save();
+    // let temp = global.queue.head;
+    // while(temp != null)
+    // await new QueueModel(
+    //     {
+    //         queueId: global.queue.count - 1,
+    //         data: global.queue.peepBack()
+    //     }).save();
+    QueueModel.insertMany(global.queue.getAllAsArray());
 }
 
 const ClearQueue = async (req, res, next) => {

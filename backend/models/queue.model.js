@@ -7,6 +7,7 @@ const queueSchema = new mongoose.Schema({
         required: true
     },
     data: {
+        name: String,
         foodList: [mongoose.Types.ObjectId],
         totalPrice: Number
     }

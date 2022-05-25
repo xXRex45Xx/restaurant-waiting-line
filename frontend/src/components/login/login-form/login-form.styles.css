@@ -17,6 +17,10 @@
     margin-top: 15px;
 }
 
+.loginForm_inputLabel {
+    text-align: center;
+}
+
 .loginForm_inputImg {
     height: 16pt;
 }
@@ -34,7 +38,12 @@
 }
 
 .loginForm_submit {
+    margin-top: 5px;
     background-color: transparent;
     border: none;
     align-self: flex-end;
+}
+
+.loginForm_input--invalid {
+    border-left: 2px solid red;
 }

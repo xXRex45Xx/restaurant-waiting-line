@@ -1,0 +1,54 @@
+.changePass{
+    margin: 20px auto;
+    width: 50rem;
+    max-width: 95%;
+    text-align: center;
+}
+
+.changePass button{
+    font: inherit;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border: none;
+    background-color: grey;
+    color: white;
+    border-radius: 10px;
+    margin-right: 1rem;
+}
+
+.changePass button:hover,
+.changePass button:active {
+    text-decoration: underline;
+}
+
+.changePass_inputs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.changePass_inputContainer label{
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.changePass_inputContainer input{
+    font: inherit;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 20rem;
+    max-width: 100%;
+}
+
+.changePass_inputContainer input.empty{
+    border: 1px solid red;
+}
+
+.changePass_actions {
+    text-align: right;
+}

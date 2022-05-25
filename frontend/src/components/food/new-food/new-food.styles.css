@@ -1,0 +1,55 @@
+.newFood{
+    margin: 20px auto;
+    width: 50rem;
+    max-width: 95%;
+    text-align: center;
+}
+
+.newFood button{
+    font: inherit;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border: none;
+    background-color: grey;
+    color: white;
+    border-radius: 10px;
+    margin-right: 1rem;
+}
+
+.newFood button:hover,
+.newFood button:active {
+    text-decoration: underline;
+}
+
+.newFood_inputs{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.newFood_inputContainer label{
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.newFood_inputContainer input, 
+.newFood_inputContainer textarea{
+    font: inherit;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 20rem;
+    max-width: 100%;
+}
+
+.newFood_inputContainer input.empty, 
+.newFood_inputContainer textarea.empty{
+    border: 1px solid red;
+}
+
+.newFood_actions {
+    text-align: right;
+}

@@ -1,11 +1,12 @@
 .containerShade{
     background-color: #c4c4c4;
-    opacity: 0.75;
+    opacity: 0.85;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;  
     overflow-y: auto;
+    border-radius: 10px;
 }
 
 .containerShade_children{

@@ -1,0 +1,72 @@
+.foodItemContainer{
+    opacity: 1;
+}
+
+.foodItemContainer button{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 4px;
+}
+
+.foodItemContainer button:hover{
+    text-decoration: underline;
+}
+
+.foodItem{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    background-color: grey;
+    border-radius: 10px;
+}
+
+.foodItem_price{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 4rem;
+    height: 4rem;
+    background-color:black;
+    color: white;
+    border-radius: 12px;
+    margin-right: 3rem;
+    justify-content: center;
+    font-size: 0.75rem;
+}
+
+.foodItem_description{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.foodItem_description h2{
+    font-size: 1.3rem;
+    margin-bottom: auto;
+}
+
+@media (max-width: 580px) {
+    .foodItem{
+        gap: 1rem;
+    }
+    
+    .foodItem_description {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        flex: 1;
+    }
+
+    .foodItem_description h2 {
+        font-size: 1.25rem;
+        margin-bottom: 5px;
+    }
+}

@@ -1,0 +1,70 @@
+.newOrder{
+    margin: 20px auto;
+    width: 50rem;
+    max-width: 95%;
+    text-align: center;
+}
+
+.newOrder button{
+    font: inherit;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border: none;
+    background-color: grey;
+    color: white;
+    border-radius: 10px;
+    margin-right: 1rem;
+}
+
+.newOrder button:hover,
+.newOrder button:active {
+    text-decoration: underline;
+}
+
+.newOrder_inputs{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.newOrder_inputContainer label{
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    /* display: block; */
+}
+
+.newOrder_inputContainer input{
+    font: inherit;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    /* width: 20rem; */
+    max-width: 100%;
+}
+
+.newOrder_inputContainer input.empty{
+    border: 1px solid red;
+}
+
+.newOrder_actions {
+    text-align: right;
+}
+
+.newOrder_foodList {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.newOrder_foodList .newOrder_inputContainer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.newOrder_foodList .newOrder_inputContainer label{
+    flex-basis: 90%;
+}

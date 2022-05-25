@@ -1,0 +1,24 @@
+.queueList{
+    padding: 1rem;
+    margin: 2rem auto;
+    width: 50rem;
+    max-width: 95%;
+    text-align: right;
+}
+
+
+.queueList button{
+    font: inherit;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border: none;
+    background-color: grey;
+    color: white;
+    border-radius: 10px;
+    margin-right: 1rem;
+}
+
+.queueList button:hover,
+.queueList button:active {
+    text-decoration: underline;
+}
